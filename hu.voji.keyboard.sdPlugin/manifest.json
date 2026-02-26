@@ -25,9 +25,9 @@
 	"CodePath": "bin/plugin.js",
 	"Description": "This plugin is designed to emit native keyboard events directly to the operating system. It enables support for application features that depend on key hold behavior, such as push-to-talk in communication tools or lean functions in video games.",
 	"Icon": "imgs/plugin/marketplace",
-	"SDKVersion": 2,
+	"SDKVersion": 3,
 	"Software": {
-		"MinimumVersion": "6.5"
+		"MinimumVersion": "6.9"
 	},
 	"OS": [
 		{
