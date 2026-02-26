@@ -11,8 +11,6 @@ const winnapi = require("./addons/winnapi.node");
 @action({ UUID: "hu.voji.keyboard.sendkey" })
 export class SendKey extends SingletonAction<SendKeySettings> {
 
-	private savedTitle: string | null = null;
-
 	/**
 	 * Listens for the {@link SingletonAction.onKeyDown} event which is emitted by Stream Deck when an action is pressed. Stream Deck provides various events for tracking interaction
 	 * with devices including key down/up, dial rotations, and device connectivity, etc. When triggered, {@link ev} object contains information about the event including any payloads
@@ -61,10 +59,7 @@ export class SendKey extends SingletonAction<SendKeySettings> {
 	 */
 	private async updateTitle(ev: any, settings: SendKeySettings): Promise<void> {
 		const generatedTitle = this.generateTitleFromSettings(settings);
-		if (this.savedTitle != generatedTitle) {
-			await ev.action.setTitle(generatedTitle);
-			this.savedTitle = generatedTitle;
-		}
+		await ev.action.setTitle(generatedTitle);
 	}
 
 
@@ -79,7 +74,7 @@ export class SendKey extends SingletonAction<SendKeySettings> {
 		if (settings.mod_win) modifiers.push("Win");
 
 		var modifierText = modifiers.length > 0 ? modifiers.join("+") : "";
-		const hotkey = settings.hotkey.trim();
+		const hotkey = typeof settings?.hotkey === "string" ? settings.hotkey.trim() : "";
 		if (modifierText.length > 0 && hotkey.length > 0) {
 			modifierText += "+";
 		}
