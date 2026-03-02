@@ -15,7 +15,7 @@
       "copies":
       [
         {
-            'destination': '<(module_root_dir)/../hu.voji.keyboard.sdPlugin/bin/addons',
+            'destination': '<(module_root_dir)/../hu.voji.keyboard.hotkeyhold.sdPlugin/bin/addons',
             'files': ['<(module_root_dir)/build/Release/winnapi.node']
         }
       ]

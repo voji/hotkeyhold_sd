@@ -1,12 +1,12 @@
-import streamDeck, { LogLevel } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
 
-import { SendKey } from "./actions/sendkey";
+import { HotkeyHold } from "./actions/hotkeyhold";
 
 
-streamDeck.logger.setLevel(LogLevel.INFO);
+streamDeck.logger.setLevel("info");
 
 // Register the actions.
-streamDeck.actions.registerAction(new SendKey());
+streamDeck.actions.registerAction(new HotkeyHold());
 
 // Finally, connect to the Stream Deck.
 streamDeck.connect();

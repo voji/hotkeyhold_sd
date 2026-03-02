@@ -1,0 +1,43 @@
+{
+	"Name": "Hotkey Hold",
+	"Version": "1.0.0.0",
+	"Author": "voji",
+	"Actions": [
+		{
+			"Name": "Hotkey Hold",
+			"UUID": "hu.voji.keyboard.hotkeyhold",
+			"Icon": "imgs/actions/hotkeyhold/icon",
+			"Tooltip": "Send native key down, and key up events based on the Stream deck button state.",
+			"PropertyInspectorPath": "ui/hotkeyhold.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/hotkeyhold/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "Keyboard",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "This plugin is designed to emit native keyboard events directly to the operating system. It enables support for application features that depend on key hold behavior, such as push-to-talk in communication tools or lean functions in video games.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "6.9"
+	},
+	"OS": [
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "hu.voji.keyboard.hotkeyhold"
+}

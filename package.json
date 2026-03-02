@@ -2,7 +2,7 @@
     "scripts": {
         "build": "cd native && npx node-gyp clean configure build && cd .. && rollup -c",
         "quickbuild": "rollup -c",
-        "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart hu.voji.keyboard\""
+        "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart hu.voji.keyboard.hotkeyhold\""
     },
     "type": "module",
     "devDependencies": {

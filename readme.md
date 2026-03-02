@@ -1,12 +1,12 @@
 # SendKey - Stream Deck Plugin
 
-SendKey is an Elgato Stream Deck plugin that enables sending native keyboard events directly to the operating system, based on Elgato controller button state (keyDown, and keyUp). This allows control of application features that require hold key behavior — such as push-to-talk, or in-game movement commands (e.g. lean), or triggering system-level hotkeys.
+Hotkey Hold (previously called: SendKey) is an Elgato Stream Deck plugin that enables sending native keyboard events directly to the operating system, based on Elgato controller button state (keyDown, and keyUp). This allows control of application features that require hold key behavior — such as push-to-talk, or in-game movement commands (e.g. lean), or triggering system-level hotkeys.
 
 The plugin uses N-API to access native functionality, and it is currently compiled only for the Windows operating system.
 
 ## Supported Key Names
 
-The `SendKey key` text field accepts:
+The `Hotkey` text field accepts:
 
 - Single printable characters (for example: `A`, `1`, `,`)
 - Function keys: `F1` to `F24`
@@ -43,7 +43,7 @@ npm run watch
 
 ## Development Setup
 
-To enable watch functionality, you need to create a symbolic link in the Elgato Stream Deck application's plugin directory (`%APPDATA%/Elgato/StreamDeck/Plugins`) that points to the `hu.voji.keyboard.sdPlugin` folder in your project directory.
+To enable watch functionality, you need to create a symbolic link in the Elgato Stream Deck application's plugin directory (`%APPDATA%/Elgato/StreamDeck/Plugins`) that points to the `hu.voji.keyboard.hotkeyhold.sdPlugin` folder in your project directory.
 
 
 ## Release 
@@ -52,7 +52,7 @@ build the plugin
 pack with the following command:
 
 ```bash
-streamdeck pack hu.voji.keyboard.sdPlugin
+streamdeck pack hu.voji.keyboard.hotkeyhold.sdPlugin
 ```
 
 publish on https://maker.elgato.com/
